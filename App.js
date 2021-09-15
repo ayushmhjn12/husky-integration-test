@@ -37,7 +37,7 @@ const Section = ({children, title}): Node => {
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        AM?PM
+        {title}
       </Text>
       <Text
         style={[

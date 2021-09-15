@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js src/",
     "eslint": "eslint --fix .js src/",
     "prepare": "husky install",
-    "precommit": "npm run lint && npm test",
+    "pre-commit": "lint-staged",
     "prepush": "npm run lint"
   },
   "dependencies": {

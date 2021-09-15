@@ -37,7 +37,7 @@ const Section = ({children, title}): Node => {
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        {title}
+        App Test
       </Text>
       <Text
         style={[
@@ -71,8 +71,8 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-                        Edit <Text style={styles.highlight}>App.js</Text> to change this
-                        screen and then come back to see your edits.
+            Edit <Text style={styles.highlight}>App.js</Text> to change this
+            screen and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
@@ -81,8 +81,8 @@ const App: () => Node = () => {
             <DebugInstructions />
           </Section>
           <Section title="Learn More">
-                        Read the docs to discover what to do next:
-                    </Section>
+            Read the docs to discover what to do next:
+          </Section>
           <LearnMoreLinks />
         </View>
       </ScrollView>

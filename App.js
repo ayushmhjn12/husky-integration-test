@@ -37,7 +37,7 @@ const Section = ({children, title}): Node => {
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        App Test
+        {title}
       </Text>
       <Text
         style={[

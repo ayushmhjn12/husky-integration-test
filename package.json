@@ -8,10 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext .js src/",
-    "eslint": "eslint --fix .js src/",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged",
-    "prepush": "npm run lint"
+    "eslint": "eslint .js src/",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "17.0.2",
@@ -20,6 +18,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/runtime": "^7.15.4",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@react-native-community/eslint-config": "^3.0.1",
     "babel-jest": "^27.2.0",
     "eslint": "^7.32.0",
@@ -35,18 +35,6 @@
   "jest": {
     "preset": "react-native"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md,html}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ]
-  },
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -59,5 +47,8 @@
     "url": "https://github.com/ayushmhjn12/husky-integration-test/issues"
   },
   "homepage": "https://github.com/ayushmhjn12/husky-integration-test#readme",
-  "description": ""
+  "description": "",
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
 }
